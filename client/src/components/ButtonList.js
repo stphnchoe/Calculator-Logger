@@ -4,10 +4,13 @@ import CalculatorButton from "./CalculatorButton";
 const ButtonList = () => {
   return (
     <div>
-      Button List
       <div>
-        <div>Buttons</div>
-        <CalculatorButton />
+        <div className="columns">
+          Buttons
+          <div className="column">
+            <CalculatorButton />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,9 @@ import Display from "./Display";
 import ButtonList from "./ButtonList";
 
 class Calculator extends Component {
-  state = {};
+  state = {
+    displayValue: 0,
+  };
 
   render() {
     return (
@@ -24,8 +26,12 @@ class Calculator extends Component {
         </div>
         <div className="hero-body">
           <div className="container">
-            <Display />
-            <ButtonList />
+            <div className="columns is-mobile">
+              <div className="column">
+                <Display displayValue={this.state.displayValue} />
+                <ButtonList />
+              </div>
+            </div>
           </div>
         </div>
       </section>
